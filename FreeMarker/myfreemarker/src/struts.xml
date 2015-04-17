@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="users" extends="struts-default" namespace="/users">
+		<action name="users_*" class="com.pop.project.myftl.test.action.UserAction" method="{1}">
+			<result name="index" type="freemarker">/WEB-INF/ftl/index.ftl</result>
+			<result name="profile" type="freemarker">/WEB-INF/ftl/profile.ftl</result>
+		</action>
+	</package>
+</struts>
